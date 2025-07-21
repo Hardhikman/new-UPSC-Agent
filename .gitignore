@@ -1,0 +1,44 @@
+# 🧠 AI Models and Checkpoints
+*.ckpt
+*.pt
+*.bin
+*.safetensors
+
+# 📄 Data & PDFs
+*.pdf
+*.csv
+*.json
+*.db
+*.zip
+*.tar
+*.gz
+
+# ⚙️ Python Cache & Env
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+
+# 💾 Vector stores & local DBs
+data/
+models/
+chroma_db/
+*.npy
+
+# 🧪 Test outputs & logs
+*.log
+*.out
+
+# 💻 IDE and Editor Files
+.vscode/
+.idea/
+.DS_Store
+
+# ⚙️ Ollama-specific (if models stored locally)
+ollama/
+ollama_models/
+OLLAMA_MODELS/
+
+# 🤖 Supabase config (don't upload secrets)
+supabase.env

@@ -1,0 +1,6 @@
+pypdf2
+langchain
+ollama
+chromadb
+gradio
+supabase
