@@ -1,3 +1,4 @@
+# these files will not be uploaded to the repository
 # 🧠 AI Models and Checkpoints
 *.ckpt
 *.pt
@@ -42,3 +43,6 @@ OLLAMA_MODELS/
 
 # 🤖 Supabase config (don't upload secrets)
 supabase.env
+
+# Environment variables
+.env
