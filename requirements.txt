@@ -1,6 +1,7 @@
-pypdf2
+gradio
 langchain
+langchain-community
 ollama
 chromadb
-gradio
-supabase
+python-dotenv
+PyPDF2
