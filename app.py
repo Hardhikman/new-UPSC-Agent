@@ -15,7 +15,7 @@ from pydantic import BaseModel
 from langchain.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import OllamaEmbeddings  # Optional for local embeddings
+from langchain_community.embeddings import OllamaEmbeddings  # change it to huggingface embed if needed
 
 # === Load environment ===
 load_dotenv()
