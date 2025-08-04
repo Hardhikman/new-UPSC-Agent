@@ -13,7 +13,7 @@ from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
 from langchain.prompts import PromptTemplate
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OllamaEmbeddings  # Optional for local embeddings
 
