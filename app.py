@@ -13,7 +13,7 @@ from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
 from langchain.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OllamaEmbeddings  # Optional for local embeddings
 
@@ -24,11 +24,13 @@ load_dotenv()
 cache = Cache("news_cache")
 
 # === Langchain model setup ===
-llm = ChatOpenAI(
+# === Langchain model setup ===  # ✅ Use correct Langchain provider for Groq
+
+llm = ChatGroq(                     # ✅ Change from ChatOpenAI → ChatGroq
     model="mixtral-8x7b-32768",
-    openai_api_key=os.getenv("GROQ_API_KEY"),
-    openai_api_base="https://api.groq.com/openai/v1"
+    groq_api_key=os.getenv("GROQ_API_KEY")  # ✅ Correct key name for Groq
 )
+
 
 # === Load vector DB ===
 embedding = OllamaEmbeddings(model=os.getenv("EMBEDDING_MODEL", "phi3"))  # Optional, only used for Chroma
