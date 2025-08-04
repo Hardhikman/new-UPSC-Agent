@@ -1,6 +1,6 @@
 import json
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings  #hugging face embedding needed
 from langchain.docstore.document import Document
 import os
 from dotenv import load_dotenv
