@@ -10,7 +10,7 @@ load_dotenv()
 # --- Configuration ---
 CHUNK_FILE = "data/chunks.json"
 PERSIST_DIR = os.getenv("PERSIST_DIR", "chroma_db")
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "phi3")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "")    #you need to change here inside " " - Which LLM model of GROQ you are using
 
 # --- Check if data exists ---
 if not os.path.exists(CHUNK_FILE) or os.path.getsize(CHUNK_FILE) == 0:
