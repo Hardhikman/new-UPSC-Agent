@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: upsc-generator
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port 7860
+    envVars:
+      - key: LLM_MODEL
+        value: phi3
+      - key: EMBEDDING_MODEL
+        value: phi3
+      - key: PERSIST_DIR
+        value: chroma_db
+      - key: NEWSAPI_KEY
+        value: 81a39fd300a2451c814547a26126e525
